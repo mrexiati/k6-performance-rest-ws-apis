@@ -1,16 +1,16 @@
-import { expect } from "https://jslib.k6.io/k6chaijs/4.3.4.3/index.js";
-import { Httpx } from "https://jslib.k6.io/httpx/0.0.2/index.js";
+import http from "k6/http";
+import { check } from "k6";
 import { options } from "../common_options/all_crocodile_options";
+import { TestType, getConfig } from "../../../../config";
 
 export { options };
 
-let session = new Httpx({
-  baseURL: "https://test-api.k6.io",
-  timeout: 20000,
-});
+let testType = "api" as TestType;
+let config = getConfig(testType);
 
 export default function () {
-  const response = session.get(`/public/crocodiles/`);
-
-  expect(response.status, "response status").to.equal(200);
+  const response = http.get(`${config.baseUrl}/public/crocodiles/`);
+  check(response, {
+    "response status": (r) => r.status === 200,
+  });
 }
