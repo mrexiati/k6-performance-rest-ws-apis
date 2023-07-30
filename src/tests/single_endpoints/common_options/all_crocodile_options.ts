@@ -4,7 +4,7 @@ export const options = {
     all_crocodile: {
       executor: "constant-vus",
       vus: 10,
-      duration: "10s",
+      duration: "15s",
     },
   },
   thresholds: {
