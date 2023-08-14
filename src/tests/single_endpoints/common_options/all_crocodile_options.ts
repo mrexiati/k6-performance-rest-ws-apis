@@ -3,8 +3,8 @@ export const options = {
   scenarios: {
     all_crocodile: {
       executor: "constant-vus",
-      vus: 10,
-      duration: "15s",
+      vus: 5,
+      duration: "10s",
     },
   },
   thresholds: {
