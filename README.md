@@ -21,21 +21,24 @@ This is a k6 performance testing project that I picked up during my leisure time
    yarn install
    ```
 3. Create ``` src/test_data/user/existingTestUser.ts ``` file and create some users for the k6 REST and WS API Play
-import { User } from "./user";
 
-export const workFlowUser: User = {
-  username: "userflowtest",
-  first_name: "your user name",
-  last_name: "your user name",
-  email: "you created email", 
-  password: "your password",
-};
+   ```typescript
+   import { User } from "./user";
+   
+   export const workFlowUser: User = {
+      username: "your user name",
+      first_name: "your user name",
+      last_name: "your user name",
+      email: "you created email", 
+      password: "your password",
+   };
+    ```
 
-4. Webpack bundle
+5. Webpack bundle
    ```sh
    yarn start
    ```
-5. Run the tests on your local machine
+6. Run the tests on your local machine
    ```sh
    k6 run dist/get_all_one_crocodile.test.js
    ```
@@ -43,6 +46,8 @@ export const workFlowUser: User = {
 <br>
 
 ### Generating Server-sent events with xk6-dashboard.
+![xk6 Dashboard Report](https://github.com/mrexiati/k6-performance-rest-ws-apis/assets/50190023/46acd870-8f86-4475-9e55-6ef43a0a1bf1)
+![xk6 Dashboard Report](https://github.com/mrexiati/k6-performance-rest-ws-apis/assets/50190023/b7c5d47f-5f34-4ad4-a2e5-ddde715b1019)
 
 1. Navigate to the project directory
 2. Download xk6
