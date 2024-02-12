@@ -42,43 +42,43 @@ export default function () {
     };
   });
 
-  //   group("Create a corcodile with the use", function () {
-  //     const response = http.get(
-  //       `${config.baseUrl}/public/crocodiles/${randomCrocodileId}`
-  //     );
+  group("Create a corcodile with the use", function () {
+    const response = http.get(
+      `${config.baseUrl}/public/crocodiles/${randomCrocodileId}`
+    );
 
-  //     check(response, {
-  //       "response status": (r) => r.status === 200,
-  //     });
-  //   });
+    check(response, {
+      "response status": (r) => r.status === 200,
+    });
+  });
 
-  //   sleep(1);
+  sleep(1);
 
-  //   group("Update the created crocodile", function () {
-  //     const response = http.get(`${config.baseUrl}/public/crocodiles/`);
+  group("Update the created crocodile", function () {
+    const response = http.get(`${config.baseUrl}/public/crocodiles/`);
 
-  //     check(response, {
-  //       "response status": (r) => r.status === 200,
-  //     });
-  //   });
+    check(response, {
+      "response status": (r) => r.status === 200,
+    });
+  });
 
-  //   sleep(1);
+  sleep(1);
 
-  //   group("Get the created and updated crocodile", function () {
-  //     const response = http.get(`${config.baseUrl}/public/crocodiles/`);
+  group("Get the created and updated crocodile", function () {
+    const response = http.get(`${config.baseUrl}/public/crocodiles/`);
 
-  //     check(response, {
-  //       "response status": (r) => r.status === 200,
-  //     });
-  //   });
+    check(response, {
+      "response status": (r) => r.status === 200,
+    });
+  });
 
-  //   sleep(1);
+  sleep(1);
 
-  //   group("Delete the created crocodile", function () {
-  //     const response = http.get(`${config.baseUrl}/public/crocodiles/`);
+  group("Delete the created crocodile", function () {
+    const response = http.get(`${config.baseUrl}/public/crocodiles/`);
 
-  //     check(response, {
-  //       "response status": (r) => r.status === 200,
-  //     });
-  //   });
+    check(response, {
+      "response status": (r) => r.status === 200,
+    });
+  });
 }
