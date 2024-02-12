@@ -29,6 +29,23 @@ This is a k6 performance testing project that I picked up during my leisure time
    k6 run dist/get_all_one_crocodile.test.js
    ```
 
+### Generating Server-sent events with xk6-dashboard.
+
+1. Navigate to the project directory
+2. Download xk6
+   ```sh
+   go install go.k6.io/xk6/cmd/xk6@latest
+   ```
+3. Build the binary:
+   ```sh
+   xk6 build --with github.com/grafana/xk6-dashboard@latest
+   ```
+4. Run the tests on your local machine
+   ```sh
+   ./k6 run --out web-dashboard dist/get_all_one_crocodile.test.js
+   ```
+5. Navigate to ``` http://127.0.0.1:5665/``` to see and interact with the report charts
+
 <p align="right"><a href="#readme-top">Jump to the top</a></p>
 <a id="readme-bottom"></a>
 
