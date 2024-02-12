@@ -8,7 +8,11 @@ This is a k6 performance testing project that I picked up during my leisure time
 <br>
 
 ### Built With
-![k6](https://img.shields.io/badge/-k6-7A41C5?style=flat-square&logo=k6&logoColor=white) ![xk6](https://img.shields.io/badge/-xk6-7A41C5?style=flat-square) ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=TypeScript&logoColor=white) ![Yarn](https://img.shields.io/badge/-Yarn-2C8EBB?style=flat-square&logo=yarn&logoColor=white) ![Webpack](https://img.shields.io/badge/-Webpack-8DD6F9?style=flat-square&logo=webpack&logoColor=black)
+[![k6](https://img.shields.io/badge/-k6-7A41C5?style=flat-square&logo=k6&logoColor=white)](https://k6.io/docs/)
+[![xk6](https://img.shields.io/badge/-xk6-7A41C5?style=flat-square)](https://github.com/grafana/xk6)
+[![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=TypeScript&logoColor=white)](https://www.typescriptlang.org/)
+[![Yarn](https://img.shields.io/badge/-Yarn-2C8EBB?style=flat-square&logo=yarn&logoColor=white)](https://yarnpkg.com/)
+[![Webpack](https://img.shields.io/badge/-Webpack-8DD6F9?style=flat-square&logo=webpack&logoColor=black)](https://webpack.js.org/)
 
 
 <br>
