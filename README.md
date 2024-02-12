@@ -20,11 +20,22 @@ This is a k6 performance testing project that I picked up during my leisure time
    ```sh
    yarn install
    ```
-3. Webpack bundle
+3. Create ``` src/test_data/user/existingTestUser.ts ``` file and create some users for the k6 REST and WS API Play
+import { User } from "./user";
+
+export const workFlowUser: User = {
+  username: "userflowtest",
+  first_name: "your user name",
+  last_name: "your user name",
+  email: "you created email", 
+  password: "your password",
+};
+
+4. Webpack bundle
    ```sh
    yarn start
    ```
-4. Run the tests on your local machine
+5. Run the tests on your local machine
    ```sh
    k6 run dist/get_all_one_crocodile.test.js
    ```
