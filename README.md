@@ -1,76 +1,37 @@
-<div align="center">
-  
-  ![banner](docs/ts-js-k6.png)
+<a id="readme-top"></a>
+## About The Project
+![Product Name Screen Shot](https://github.com/mrexiati/k6-performance/assets/50190023/7ed61e73-ccf9-4426-bf43-5091c13f7009)
+This is a k6 performance testing project that I picked up during my leisure time so that I can use it for my professional projects in the future. The aim is to write smoke, load and sanity tests for individual REST API endpoints, user workflow endpoints by chaining the API and hybrid tests with UI and API connected using PlayWright. You can access the test API endpoints from k6 website https://test-api.k6.io/.
 
-# Template to use TypeScript with k6
+<p align="right"><a href="#readme-bottom">Jump to the bottom</a></p>
 
-![.github/workflows/push.yml](https://github.com/k6io/template-typescript/workflows/.github/workflows/push.yml/badge.svg?branch=master)
+<br>
 
-</div>
-
-This repository provides a scaffolding project to start using TypeScript in your k6 scripts.
-
-## Rationale
-
-While JavaScript is great for a myriad of reasons, one area where it fall short is type safety and developer ergonomics. It's perfectly possible to write JavaScript code that will look OK and behave OK until a certain condition forces the executor into a faulty branch.
-
-While it, of course, still is possible to shoot yourself in the foot with TypeScript as well, it's significantly harder. Without adding much overhead, TypeScript will:
-
-- Improve the ability to safely refactor your code.
-- Improve readability and maintainability.
-- Allow you to drop a lot of the defensive code previously needed to make sure consumers are calling functions properly.
+### Built With
+![k6](https://img.shields.io/badge/-k6-7A41C5?style=flat-square&logo=k6&logoColor=white) ![xk6](https://img.shields.io/badge/-xk6-7A41C5?style=flat-square) ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=TypeScript&logoColor=white) ![Yarn](https://img.shields.io/badge/-Yarn-2C8EBB?style=flat-square&logo=yarn&logoColor=white) ![Webpack](https://img.shields.io/badge/-Webpack-8DD6F9?style=flat-square&logo=webpack&logoColor=black)
 
 
-## Prerequisites
+<br>
 
-- [k6](https://k6.io/docs/getting-started/installation)
-- [NodeJS](https://nodejs.org/en/download/)
-- [Yarn](https://yarnpkg.com/getting-started/install) (optional)
+### Installation
 
-## Installation
+1. Clone the repository
+2. Navigate to the project directory
+   ```sh
+   yarn install
+   ```
+3. Webpack bundle
+   ```sh
+   yarn start
+   ```
+4. Run the tests on your local machine
+   ```sh
+   k6 run dist/get_all_one_crocodile.test.js
+   ```
 
-**Creating a project from the `template-typescript` template**
-
-To generate a TypeScript project that includes the dependencies and initial configuration, navigate to the [template-typescript](https://github.com/k6io/template-typescript) page and click **Use this template**.
-
-  ![](docs/use-this-template-button.png)
+<p align="right"><a href="#readme-top">Jump to the top</a></p>
+<a id="readme-bottom"></a>
 
 
-**Install dependencies**
 
-Clone the generated repository on your local machine, move to the project root folder and install the dependencies defined in [`package.json`](./package.json)
 
-```bash
-$ yarn install
-```
-
-## Running the test
-
-To run a test written in TypeScript, we first have to transpile the TypeScript code into JavaScript and bundle the project
-
-```bash
-$ yarn webpack
-```
-
-This command creates the final test files to the `./dist` folder.
-
-Once that is done, we can run our script the same way we usually do, for instance:
-
-```bash
-$ k6 run dist/get-200-status-test.js
-```
-
-## Writing own tests
-
-House rules for writing tests:
-- The test code is located in `src` folder
-- The entry points for the tests need to have "_test_" word in the name to distinguish them from auxiliary files. You can change the entry [here](./webpack.config.js#L8). 
-- If static files are required then add them to `./assets` folder. Its content gets copied to the destination folder (`dist`) along with compiled scripts.
-
-### Transpiling and Bundling
-
-By default, k6 can only run ES5.1 JavaScript code. To use TypeScript, we have to set up a bundler that converts TypeScript to JavaScript code. 
-
-This project uses `Babel` and `Webpack` to bundle the different files - using the configuration of the [`webpack.config.js`](./webpack.config.js) file.
-
-If you want to learn more, check out [Bundling node modules in k6](https://k6.io/docs/using-k6/modules#bundling-node-modules).
